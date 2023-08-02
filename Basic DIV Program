@@ -1,7 +1,45 @@
- AREA RESET, CODE, READONLY
-    AREA DIV, CODE, READONLY
-    MOV R0,#0xDD
-    MOV R1,#0x90
-    DIV R2, R0, R1
-L1  B L1
+AREA Division, CODE, READONLY
+    ENTRY
+
+    EXPORT main
+
+main PROC
+    LDR R0, =dividend     ; Load the address of the dividend into R0
+    LDR R1, [R0]          ; Load the value of the dividend into R1
+
+    LDR R0, =divisor      ; Load the address of the divisor into R0
+    LDR R2, [R0]          ; Load the value of the divisor into R2
+
+    CMP R2, #0            ; Check if divisor is 0
+    BEQ division_by_zero  ; Branch if the divisor is zero
+
+    SDIV R3, R1, R2       ; Perform the division: R3 = R1 / R2
+
+    LDR R0, =result       ; Load the address of the result variable into R0
+    STR R3, [R0]          ; Store the quotient in the result variable
+
+    B end_program        ; Branch to the end of the program
+
+division_by_zero
+    ; Handle division by zero error
+    ; Put your error handling code here
+    ; For simplicity, I'm just returning -1
+    MOV R3, #-1           ; R3 = -1
+    LDR R0, =result       ; Load the address of the result variable into R0
+    STR R3, [R0]          ; Store the error value in the result variable
+
+end_program
+    MOV R0, #0            ; Return 0 from the main function
+    BX LR                 ; Return from the main function and terminate the program
+
+    ALIGN
+dividend
+    DCD 100               ; The dividend (input)
+
+divisor
+    DCD 5                 ; The divisor (input)
+
+result
+    DCD 0                 ; The quotient (output)
+
     END
