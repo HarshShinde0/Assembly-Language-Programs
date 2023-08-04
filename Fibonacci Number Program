@@ -1,7 +1,7 @@
 	AREA    RESET, CODE, READONLY
 	ENTRY
 
-start	MOV     R1, #16     
+start	MOV     R1, #24     
 		MOV     R3, #0      
 		MOV     R0, #1      
 		MOV     R2, #1      
