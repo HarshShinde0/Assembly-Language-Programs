@@ -7,7 +7,8 @@ Google Drive - https://drive.google.com/file/d/1QP6bo1slwskKAf2PAAiQSDrkQzjM8Uly
 
 # Keil µVision 4.0:
 
-![Alt text]([Keil.png](https://github.com/HarshShinde0/Assembly-Language/blob/main/README/Keil.png?raw=true))
+![image](https://github.com/HarshShinde0/Assembly-Language/assets/113786425/84786f02-87b5-4309-9493-97b67866f6d5)
+
 
 Keil µVision 4.0 is an integrated development environment (IDE) specifically designed for developing software for embedded systems. It was created by Keil Software, now a part of ARM, and is commonly used for programming microcontrollers and other embedded devices.
 
@@ -32,7 +33,8 @@ Please note that my knowledge is based on information available up until Septemb
 
 # Assembly Language:
 
-![Alt text](assembly.png)
+![image](https://github.com/HarshShinde0/Assembly-Language/assets/113786425/e05b6e44-74f3-4574-b950-115f4d0edbaf)
+
 
 Assembly language is a low-level programming language that is specific to a particular computer architecture or processor. It serves as a bridge between human-readable code (mnemonics) and machine code (binary instructions) that the computer's central processing unit (CPU) can execute.
 
